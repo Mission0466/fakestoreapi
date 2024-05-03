@@ -20,4 +20,6 @@ public interface ProductService {
     void deleteProduct(Long productId);
 
     Product updateProduct(Long productId, String title, double price, String description, String image, String category);
+
+    List<Product> getProductByCategory(String category);
 }

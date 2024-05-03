@@ -79,6 +79,11 @@ public class ProductServiceImpfakestore implements ProductService{
         return response.toProduct();
     }
 
+    @Override
+    public List<Product> getProductByCategory(String category) {
+        return null;
+    }
+
 }
 
 

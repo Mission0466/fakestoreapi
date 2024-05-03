@@ -4,6 +4,7 @@ import org.example.fakestoreapi.DTOS.FakeStoreProductDTO;
 import org.example.fakestoreapi.Models.Product;
 import org.example.fakestoreapi.Services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,7 +17,7 @@ public class ProductController {
     private RestTemplate restTemplate;
 
     @Autowired
-    public ProductController(ProductService productService, RestTemplate restTemplate){
+    public ProductController(@Qualifier("selfProductService") ProductService productService, RestTemplate restTemplate){
         this.productService = productService;
         this.restTemplate = restTemplate;
     }
